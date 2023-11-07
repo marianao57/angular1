@@ -1,0 +1,5 @@
+<h1>{{ title }}</h1>
+
+<!--Llamado de la función changeTitle() creada en app.components.ts-->
+<button (click)="changeTitle()">Change</button>
+<app-product [product]="product" *ngFor="let product of products"></app-product>

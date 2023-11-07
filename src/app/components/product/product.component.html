@@ -1,0 +1,11 @@
+#Este es un if para verificar que el producto exista
+<ng-container *ngIf="product">
+  <h1>{{ product.title }}</h1>
+  <p>{{ product.price }}</p>
+  <img [src]="product.images" alt="" />
+</ng-container>
+
+#si no existe producto muestra este div
+<ng-container ngIf="!product">
+  <p>No existe</p>
+</ng-container>
