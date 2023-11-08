@@ -2,7 +2,8 @@
 <ng-container *ngIf="product">
   <h1>{{ product.title }}</h1>
   <p>{{ product.price }}</p>
-  <img [src]="product.images" alt="" />
+  <!--Se usa ngSrc para el uso de NgOptimizedImage-->
+  <img [ngSrc]="product.images[0]" width="600" height="600"/>
 </ng-container>
 
 <!--si no existe producto muestra este div-->
