@@ -20,12 +20,11 @@ export class AppComponent {
 
   //Este es un disparador, en este caso se va a consumir una api
   //No es una promesa, se utiliza rxjs, no hay promise por lo cual se usa .suscribe
-  ngOnInnit() {
+  ngOnInit() {
     this.http.get<Product[]>('https://api.escuelajs.co/api/v1/products')
       //en resp se tiene el json de la api
-      .subscribe((resp:any) => {
-        let data = resp.json()
-        this.products = data;
+      .subscribe((data) => {
+        this.products = data
       });
   }
 }
